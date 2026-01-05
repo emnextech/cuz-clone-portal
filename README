@@ -1,0 +1,16 @@
+will build a clone improved frontend for the cavendish university student portal
+
+login UI:
+two fileds only student ID with 6 limit digits 
+and filed for password. 
+
+colors of the website 
+primary: #1a386e
+secondary: #8b9cb2
+
+Tech, framework and languege 
+1. tailwind css
+2. typescript 
+3. vite
+
+will deploy on vercel. 
