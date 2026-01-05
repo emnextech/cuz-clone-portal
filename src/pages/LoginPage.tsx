@@ -49,25 +49,20 @@ const LoginPage = () => {
       return;
     }
 
-    // Authenticate with default credentials (prototype only)
+    // Authenticate with hardcoded credentials (demo only)
     setIsLoading(true);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       
-      const defaultStudentId = import.meta.env.VITE_DEFAULT_STUDENT_ID;
-      const defaultPassword = import.meta.env.VITE_DEFAULT_PASSWORD;
-      
-      if (
-        credentials.studentId === defaultStudentId &&
-        credentials.password === defaultPassword
-      ) {
+      // Hardcoded credentials matching the hint
+      if (credentials.studentId === '123456' && credentials.password === '202631') {
         // Store student ID in localStorage
         localStorage.setItem('studentId', credentials.studentId);
-        console.log('Login successful:', credentials);
+        console.log('Login successful');
         // Navigate to dashboard
         navigate('/dashboard', { replace: true });
       } else {
-        setLoginError('Invalid Student ID or Password');
+        setLoginError('Invalid Student ID or Password. Please use the demo credentials shown above.');
       }
     } catch (error) {
       console.error('Login failed:', error);
