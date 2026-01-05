@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import DashboardLayout from '../components/layout/DashboardLayout';
 import { Card } from '../components/ui';
-import { BookOpen, FileText, Award, GraduationCap } from 'lucide-react';
+import { BookOpen, Award, GraduationCap } from 'lucide-react';
 
 const ResultsPage = () => {
   const navigate = useNavigate();
