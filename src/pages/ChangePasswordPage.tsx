@@ -37,32 +37,32 @@ const ChangePasswordPage = () => {
 
   return (
     <DashboardLayout>
-      <div className="p-8 h-screen overflow-hidden">
-        <h1 className="text-3xl font-bold text-primary mb-6">Change Password</h1>
+      <div className="p-4 sm:p-6 lg:p-8 pt-16 lg:pt-8 min-h-screen overflow-y-auto">
+        <h1 className="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6">Change Password</h1>
         
         <Card className="max-w-md">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-primary/10 rounded-lg">
-              <Lock className="w-6 h-6 text-primary" />
+          <div className="flex items-center gap-3 mb-4 sm:mb-6">
+            <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
+              <Lock className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             </div>
             <div>
-              <h2 className="text-lg font-bold text-primary">Update Your Password</h2>
-              <p className="text-sm text-gray-600">Keep your account secure</p>
+              <h2 className="text-base sm:text-lg font-bold text-primary">Update Your Password</h2>
+              <p className="text-xs sm:text-sm text-gray-600">Keep your account secure</p>
             </div>
           </div>
 
           {message && (
-            <div className={`flex items-center gap-2 p-4 mb-4 rounded-lg ${
+            <div className={`flex items-center gap-2 p-3 sm:p-4 mb-3 sm:mb-4 rounded-lg text-sm sm:text-base ${
               message.includes('successfully') 
                 ? 'bg-green-50 text-green-700 border border-green-200' 
                 : 'bg-red-50 text-red-700 border border-red-200'
             }`}>
-              {message.includes('successfully') && <CheckCircle className="w-5 h-5" />}
-              {message}
+              {message.includes('successfully') && <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />}
+              <span>{message}</span>
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
             <Input
               name="current"
               label="Current Password"

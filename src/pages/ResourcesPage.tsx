@@ -23,39 +23,39 @@ const ResourcesPage = () => {
 
   return (
     <DashboardLayout>
-      <div className="p-8 h-screen overflow-hidden">
-        <h1 className="text-3xl font-bold text-primary mb-6">Electronic Resources</h1>
+      <div className="p-4 sm:p-6 lg:p-8 pt-16 lg:pt-8 min-h-screen overflow-y-auto">
+        <h1 className="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6">Electronic Resources</h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           {resources.map((resource, idx) => (
             <Card key={idx} className="hover:shadow-xl transition-shadow cursor-pointer">
-              <div className="flex items-center gap-4">
-                <div className="p-4 bg-primary/10 rounded-lg">
-                  <resource.icon className="w-8 h-8 text-primary" />
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="p-3 sm:p-4 bg-primary/10 rounded-lg flex-shrink-0">
+                  <resource.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 </div>
-                <div>
-                  <h3 className="font-bold text-primary text-lg">{resource.name}</h3>
-                  <p className="text-sm text-secondary">{resource.type}</p>
+                <div className="min-w-0">
+                  <h3 className="font-bold text-primary text-base sm:text-lg">{resource.name}</h3>
+                  <p className="text-xs sm:text-sm text-secondary">{resource.type}</p>
                 </div>
               </div>
             </Card>
           ))}
         </div>
 
-        <Card className="mt-6">
-          <h2 className="text-xl font-bold text-primary mb-4">Quick Access</h2>
-          <div className="space-y-3">
-            <div className="flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:bg-gray-50">
-              <span className="text-gray-700">Course Materials - Spring 2026</span>
-              <Download className="w-5 h-5 text-secondary" />
+        <Card className="mt-4 sm:mt-6">
+          <h2 className="text-lg sm:text-xl font-bold text-primary mb-3 sm:mb-4">Quick Access</h2>
+          <div className="space-y-2 sm:space-y-3">
+            <div className="flex items-center justify-between p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+              <span className="text-gray-700 text-sm sm:text-base truncate mr-2">Course Materials - Spring 2026</span>
+              <Download className="w-4 h-4 sm:w-5 sm:h-5 text-secondary flex-shrink-0" />
             </div>
-            <div className="flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:bg-gray-50">
-              <span className="text-gray-700">Lecture Notes Archive</span>
-              <Download className="w-5 h-5 text-secondary" />
+            <div className="flex items-center justify-between p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+              <span className="text-gray-700 text-sm sm:text-base truncate mr-2">Lecture Notes Archive</span>
+              <Download className="w-4 h-4 sm:w-5 sm:h-5 text-secondary flex-shrink-0" />
             </div>
-            <div className="flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:bg-gray-50">
-              <span className="text-gray-700">Previous Exam Papers</span>
-              <Download className="w-5 h-5 text-secondary" />
+            <div className="flex items-center justify-between p-2 sm:p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+              <span className="text-gray-700 text-sm sm:text-base truncate mr-2">Previous Exam Papers</span>
+              <Download className="w-4 h-4 sm:w-5 sm:h-5 text-secondary flex-shrink-0" />
             </div>
           </div>
         </Card>
